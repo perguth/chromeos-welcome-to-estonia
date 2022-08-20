@@ -4,6 +4,9 @@
   hosts: localhost
   connection: local
 
+  roles:
+    - alzadude.firefox-addon
+
   become: true
   tasks:
 
