@@ -39,8 +39,9 @@
       apt:
         name: firefox-esr
     - name: 'Install the Web eID extension'
+      become: false
       firefox_addon:
-        url: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension/
+        url: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
   - block: # Install DigiDoc4 Client
     - name: 'Install build dependencies'
       apt:
