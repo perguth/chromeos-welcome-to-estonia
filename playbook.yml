@@ -67,8 +67,3 @@
       shell:
         chdir: /tmp/DigiDoc4-Client
         cmd: cmake --build build
-
-  - block: # Initalize
-    - name: 'Initalize open-eid'
-      command:
-        cmd: /usr/bin/esteid-update-nssdb
