@@ -1,5 +1,7 @@
 #!/bin/sh
 
+$repo_name=chromeos-welcome-to-estonia
+
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 
@@ -9,8 +11,8 @@ echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo te
 sudo apt update && sudo apt install -y ansible
 
 # Clone repository
-git clone https://github.com/perguth/chromeos-welcome-to-estonia.git
-cd chromeos-playbook
+git clone https://github.com/perguth/$repo_name.git
+cd $repo_name
 
 # Run playbook
 ansible-galaxy install alzadude.firefox-addon
@@ -18,4 +20,4 @@ ansible-playbook playbook.yml
 
 # Clean up
 cd ..
-rm -rf chromeos-welcome-to-estonia
+rm -rf $repo_name
