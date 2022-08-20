@@ -19,7 +19,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 
 3. Open Firefox and install https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
-You can now use Firefox to e.g. log into the estonian online portal here:
+You can now use Firefox to sign documents and e.g. log into the estonian online portal here:
 
 - https://www.eesti.ee/en
 
