@@ -27,7 +27,7 @@
       get_url:
         url: http://ftp.ee.debian.org/debian/pool/main/x/xalan/libxalan-c111_1.11-9_amd64.deb
         dest: /tmp/libxalan-c111_1.11-9_amd64.deb
-        checksum: 79179c073c342742304b8112d800c5ccaf55c85e8e731995b806cf2329bdf123
+        checksum: sha256:79179c073c342742304b8112d800c5ccaf55c85e8e731995b806cf2329bdf123
     - name: 'Install dependency 2/2'
       apt:
         deb: /tmp/libxalan-c111_1.11-9_amd64.deb
