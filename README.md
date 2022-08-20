@@ -1,4 +1,4 @@
-# Chrome OS Welcome to Estonia
+# Chrome OS: Welcome to Estonia
 Sets up Chrome OS with all the tools needed for the e-Residency of Estonia
 
 It installs and configures:
