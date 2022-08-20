@@ -33,7 +33,7 @@
         name: open-eid
   - block: # Install Firefox and plugins
     - name: 'Install Firefox'
-      deb:
+      apt:
         name: firefox-esr
     - name: 'Install the Web eID extension'
       firefox_addon:
