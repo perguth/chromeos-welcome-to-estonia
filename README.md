@@ -6,7 +6,7 @@ It installs and configures:
 - **open-eid** - The system programm that connects the smart card reader. You never need to use it directly
 - **Firefox** - A little less chaos using Firefox as you don't end up with two Chrome browsers on you system
 - **Firefox extensions** - The required Firefox extensions. You never need to use them directly
-- **Web ID** - The software you can use to sign and encrypt documents
+- **DigiDoc4** - The software you can use to sign and encrypt documents
 
 ## Installation
 
