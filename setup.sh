@@ -7,7 +7,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo tee /etc/apt/sources.list.d/ansible.list
 sudo apt update && sudo apt install -y ansible
-ansible-galaxy install alzadude.firefox-addon
 
 # Clone repository
 git clone https://github.com/perguth/chromeos-welcome-to-estonia.git
