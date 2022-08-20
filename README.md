@@ -27,7 +27,7 @@ You can now simply restart Chrome OS (not just Linux) and enjoy ✌️
 1. Plug the smart card reader with the card into your USB port
 2. Click "connect to linux" in the small pop up that appears bottom right
 
-You can start start `DigiDoc4` like any other program and use it to sign and encrypt/decrypt documents.
+You can now start `DigiDoc4` like any other program and use it to sign and encrypt/decrypt documents.
 
 You can now use `Firefox` to e.g. log into the estonian online portal here:
 
