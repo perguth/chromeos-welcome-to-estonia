@@ -14,11 +14,11 @@ It installs and configures:
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/master/setup.sh)"
 ```
 
 You can now open Firefox and try to log into the estonian online portal here:
 
 - https://www.eesti.ee/en
 
-Enjoy ✌️
+There you'll find your email and state related services. Enjoy ✌️
