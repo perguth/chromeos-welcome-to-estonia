@@ -20,10 +20,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 3. Open Firefox and install
   - https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
+You can now simply restart Linux (not Chrome OS) and enjoy ✌️
+
 ## Usage
 
 You can now use Firefox to sign documents and e.g. log into the estonian online portal here:
 
 - https://www.eesti.ee/en
 
-There you'll find your email and state related services. Enjoy ✌️
+There you'll find your email and state related services.
