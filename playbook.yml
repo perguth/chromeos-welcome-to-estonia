@@ -66,6 +66,6 @@
         cmd: cmake --build build
 
   - block: # Initalize
-    - name: 'Initalize open-eid`
+    - name: 'Initalize open-eid'
       command:
         cmd: /usr/bin/esteid-update-nssdb
