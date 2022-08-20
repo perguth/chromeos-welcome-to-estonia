@@ -40,7 +40,7 @@
         name: firefox-esr
     - name: 'Install the Web eID extension [MANUAL]'
       debug:
-        msg: 'Manual step: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension'
+        msg: 'Manual step in Firefox: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension'
   - block: # Install DigiDoc4 Client
     - name: 'Install build dependencies'
       apt:
