@@ -1,6 +1,6 @@
 ---
 
-- name: 'This will compute a while.
+- name: 'This will compute a while.'
   hosts: localhost
   connection: local
 
