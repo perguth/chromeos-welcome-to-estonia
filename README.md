@@ -4,7 +4,7 @@ Sets up Chrome OS with all the tools needed for the e-Residency of Estonia
 It installs and configures:
 
 - **open-eid** The system programm that connects the smart card reader. You never need to use it directly
-- **Firefox** The smart card reader works only with Firefox
+- **Firefox** A little less chaos using Firefox as you don't end up with two Chrome browsers on you system
 - **Extensions** The required Firefox extensions. You never need to use them directly
 - **Web ID** The software you can use to sign and encrypt documents
 
@@ -20,7 +20,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 3. Open Firefox and install
   - https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
-You can now simply restart Linux (not Chrome OS) and enjoy ✌️
+You can now simply restart Chrome OS (not just Linux) and enjoy ✌️
 
 ## Usage
 
