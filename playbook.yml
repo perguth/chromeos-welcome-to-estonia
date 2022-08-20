@@ -13,8 +13,8 @@
   - block: # Install open-eid
     - name: 'Add public key'
       apt_key:
-        id: 7B72F63542EC16AAB64A6B32BC0B6176E6C57850
         url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
+        id: 7B72F63542EC16AAB64A6B32BC0B6176E6C57850
     - name: 'Add repository'
       apt_repository:
         repo: deb https://installer.id.ee/media/ubuntu/ focal main
