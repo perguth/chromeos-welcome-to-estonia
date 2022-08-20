@@ -24,8 +24,11 @@ You can now simply restart Chrome OS (not just Linux) and enjoy ✌️
 
 ## Usage
 
+1. Plug the smart card reader with the card into your USB port
+2. Click "connect to linux" in the small pop up that appears bottom right
+
 You can now use Firefox to sign documents and e.g. log into the estonian online portal here:
 
-- https://www.eesti.ee/en
+- https://www.eesti.ee/en (click the lock top right and then continue using "ID-card")
 
 There you'll find your email and state related services.
