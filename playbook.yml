@@ -14,6 +14,7 @@
     - name: 'Add public key'
       apt_key:
         url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
+        id: A754225DA61EA549
     - name: 'Add repository'
       apt_repository:
         repo: deb https://installer.id.ee/media/ubuntu/ focal main
