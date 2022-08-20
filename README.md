@@ -8,7 +8,7 @@ It installs and configures:
 - **Extensions** The required Firefox extensions. You never need to use them directly
 - **Web ID** The software you can use to sign and encrypt documents
 
-## Usage
+## Installation
 
 1. **First [`🛠️ enable Linux`](https://support.google.com/chromebook/answer/9145439)**
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
@@ -18,6 +18,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 ```
 
 3. Open Firefox and install https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
+
+## Usage
 
 You can now use Firefox to sign documents and e.g. log into the estonian online portal here:
 
