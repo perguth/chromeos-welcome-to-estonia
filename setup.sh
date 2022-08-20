@@ -13,6 +13,7 @@ git clone https://github.com/perguth/chromeos-playbook.git
 cd chromeos-playbook
 
 # Run playbook
+ansible-galaxy install alzadude.firefox-addon
 ansible-playbook playbook.yml
 
 # Clean up
