@@ -14,7 +14,7 @@ git clone https://github.com/perguth/chromeos-welcome-to-estonia.git
 cd chromeos-welcome-to-estonia
 
 # Run playbook
-ansible-playbook -vvvv playbook.yml
+env ANSIBLE_DEBUG=1 ansible-playbook -vvvv playbook.yml
 
 # Clean up
 cd ..
