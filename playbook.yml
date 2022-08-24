@@ -52,15 +52,19 @@
           - libldap2-dev
           - gettext
           - pkg-config
+    - name: Create temporary build directory
+      tempfile:
+        state: directory
+      register: dir
     - name: Get source code
       git:
         repo: https://github.com/open-eid/DigiDoc4-Client.git
-        dest: /tmp/DigiDoc4-Client
+        dest: "{{ dir.path }}"
     - name: Configure
       shell:
         chdir: /tmp/DigiDoc4-Client
         cmd: cmake -B build -S .
     - name: Build and install
       shell:
-        chdir: /tmp/DigiDoc4-Client
+        chdir: "{{ dir.path }}"
         cmd: cmake --build build
