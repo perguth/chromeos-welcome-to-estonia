@@ -62,7 +62,7 @@
         dest: "{{ dir.path }}"
     - name: Configure
       shell:
-        chdir: /tmp/DigiDoc4-Client
+        chdir: "{{ dir.path }}"
         cmd: cmake -B build -S .
     - name: Build and install
       shell:
