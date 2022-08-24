@@ -9,7 +9,7 @@ It installs and configures:
 
 You need to install manually:
 
-- **Firefox extensions** - The required Firefox extensions. You never need to use them directly
+- **Firefox extension** - The required Firefox extensions. You never need to use them directly
 
 ## Installation
 
