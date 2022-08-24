@@ -7,6 +7,10 @@
   become: true
   tasks:
 
+  - name: Create temporary build directory
+    tempfile:
+      state: directory
+    register: dir
   - block: # Install open-eid
     - name: Add public key
       apt_key:
@@ -52,19 +56,15 @@
           - libldap2-dev
           - gettext
           - pkg-config
-    - name: Create temporary build directory
-      tempfile:
-        state: directory
-      register: dir
     - name: Get source code
       git:
         repo: https://github.com/open-eid/DigiDoc4-Client.git
-        dest: "{{ dir.path }}"
+        dest: "{{ dir.path }}"/DigiDoc4-Client
     - name: Configure
       shell:
-        chdir: "{{ dir.path }}"
+        chdir: "{{ dir.path }}"/DigiDoc4-Client
         cmd: cmake -B build -S .
     - name: Build and install
       shell:
-        chdir: "{{ dir.path }}"
+        chdir: "{{ dir.path }}"/DigiDoc4-Client
         cmd: cmake --build build
