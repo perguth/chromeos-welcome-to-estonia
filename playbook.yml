@@ -59,12 +59,12 @@
     - name: Get source code
       git:
         repo: https://github.com/open-eid/DigiDoc4-Client.git
-        dest: {{ dir.path }}
+        dest: "{{ dir.path }}"
     - name: Configure
       shell:
-        chdir: {{ dir.path }}
+        chdir: "{{ dir.path }}"
         cmd: cmake -B build -S .
     - name: Build and install
       shell:
-        chdir: {{ dir.path }}
+        chdir: "{{ dir.path }}"
         cmd: cmake --build build
