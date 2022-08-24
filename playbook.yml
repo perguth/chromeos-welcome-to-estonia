@@ -1,6 +1,6 @@
 ---
 
-- name: 'This will compute a while.'
+- name: This will compute a while.
   hosts: localhost
   connection: local
 
@@ -8,38 +8,38 @@
   tasks:
 
   - block: # Install open-eid
-    - name: 'Add public key'
+    - name: Add public key
       apt_key:
         url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
         id: A754225DA61EA549
-    - name: 'Add repository'
+    - name: Add repository
       apt_repository:
         repo: deb https://installer.id.ee/media/ubuntu/ focal main
         filename: ria-repository
         update_cache: yes
-    - name: 'Install dependency 1/2'
+    - name: Install dependency 1/2
       apt:
         name: libxerces-c3.2
-    - name: 'Get dependency 2/2'
+    - name: Get dependency 2/2
       get_url:
         url: http://ftp.ee.debian.org/debian/pool/main/x/xalan/libxalan-c111_1.11-9_amd64.deb
         dest: /tmp/libxalan-c111_1.11-9_amd64.deb
         checksum: sha256:79179c073c342742304b8112d800c5ccaf55c85e8e731995b806cf2329bdf123
-    - name: 'Install dependency 2/2'
+    - name: Install dependency 2/2
       apt:
         deb: /tmp/libxalan-c111_1.11-9_amd64.deb
-    - name: 'Install open-eid'
+    - name: Install open-eid
       apt:
         name: open-eid
   - block: # Install Firefox and plugins
-    - name: 'Install Firefox'
+    - name: Install Firefox
       apt:
         name: firefox-esr
-    - name: 'Install the Web eID extension [MANUAL]'
+    - name: Install the Web eID extension [MANUAL]
       debug:
-        msg: 'Manual step in Firefox: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension'
+        msg: Manual step in Firefox: https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
   - block: # Install DigiDoc4 Client
-    - name: 'Install build dependencies'
+    - name: Install build dependencies
       apt:
         name:
           - cmake
@@ -52,15 +52,15 @@
           - libldap2-dev
           - gettext
           - pkg-config
-    - name: 'Get source code'
+    - name: Get source code
       git:
         repo: https://github.com/open-eid/DigiDoc4-Client.git
         dest: /tmp/DigiDoc4-Client
-    - name: 'Configure'
+    - name: Configure
       shell:
         chdir: /tmp/DigiDoc4-Client
         cmd: cmake -B build -S .
-    - name: 'Build and install'
+    - name: Build and install
       shell:
         chdir: /tmp/DigiDoc4-Client
         cmd: cmake --build build
