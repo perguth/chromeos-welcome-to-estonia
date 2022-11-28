@@ -23,7 +23,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 3. Open Firefox and install
   - https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
-You can now simply restart Chrome OS (not just Linux) and enjoy ✌️
+You can try to get it to work (yes, it will eventually):
 
 I most reliably got it to work by shutting down Linux, plugging the smartcard reader and smardcard in, clicking "Connect to Linux" in the Chrome OS popup and then starting Linux. Sometimes I needed to repeat that or even restart Chrome OS. Last time when it refused to work I also tried `sudo service pcscd restart` but still have no clue how to get it to work without repeatedly trying.
 
