@@ -23,19 +23,14 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 3. **Install extension** Open Firefox and install:
   - https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
-You can now try to get it to work (yes, it will eventually):
-
-I most reliably got it to work by shutting down Linux, plugging the smartcard reader and smardcard in, clicking "Connect to Linux" in the Chrome OS popup and then starting Linux and opening DigiDoc to see if it works. Sometimes I needed to repeat that or even restart Chrome OS. Last time when it refused to work I also tried `sudo service pcscd restart` but still have no clue how to get it to work without repeatedly trying.
-
 ## Usage
 
 1. Plug the smart card reader with the card into your USB port
 2. Click "connect to linux" in the small pop up that appears bottom right
 
-You can now start `DigiDoc4` like any other program and use it to sign and encrypt/decrypt documents.
+I most reliably got it to work by shutting down Linux, plugging the smartcard reader and smardcard in, clicking "Connect to Linux" in the Chrome OS popup and then starting Linux and opening DigiDoc to see if it works. Sometimes I needed to repeat that or even restart Chrome OS. Last time when it refused to work I also tried `sudo service pcscd restart` but still have no clue how to get it to work without repeatedly trying.
 
-You can now use `Firefox` to e.g. log into the estonian online portal here:
-
-- https://www.eesti.ee/en (click the lock top right and then continue using "ID-card")
-
-There you'll find your email and state related services.
+- You can use `DigiDoc4` to sign and encrypt/decrypt documents.
+- You can use `Firefox` to e.g. log into the estonian online portal here:
+  - https://www.eesti.ee/en (click the lock top right and then continue using "ID-card") \
+    There you'll find your email and state related services.
