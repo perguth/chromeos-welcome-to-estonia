@@ -20,8 +20,8 @@ You need to install manually:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/setup.sh)"
 ```
 
-3. **Install extension** Open Firefox and install:
-  - https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
+3. **Install extension** Open Firefox and install: \
+  https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
 ## Usage
 
