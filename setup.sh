@@ -1,5 +1,10 @@
 #!/bin/sh
 
+NAME=chromeos-welcome-to-estonia
+
+# Clean up
+trap "cd .. && rm -rf $NAME" EXIT
+
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 
@@ -9,12 +14,8 @@ echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo te
 sudo apt update && sudo apt install -y ansible
 
 # Clone repository
-git clone https://github.com/perguth/chromeos-welcome-to-estonia.git
-cd chromeos-welcome-to-estonia
+git clone https://github.com/perguth/$NAME.git
+cd $NAME
 
 # Run playbook
 ansible-playbook playbook.yml
-
-# Clean up
-cd ..
-rm -rf chromeos-welcome-to-estonia
