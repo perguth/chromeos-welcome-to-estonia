@@ -11,6 +11,14 @@
     tempfile:
       state: directory
     register: tmp_dir
+        
+  - block: # Install Firefox and plugins
+    - name: Install Firefox
+      apt:
+        name: firefox-esr
+    - name: Install the Web eID extension [MANUAL]
+      debug:
+        msg: Manual step in Firefox -> https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
   - block: # Install open-eid
     - name: Add public key
@@ -36,13 +44,7 @@
     - name: Install open-eid
       apt:
         name: open-eid
-  - block: # Install Firefox and plugins
-    - name: Install Firefox
-      apt:
-        name: firefox-esr
-    - name: Install the Web eID extension [MANUAL]
-      debug:
-        msg: Manual step in Firefox -> https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
+
   - block: # Install DigiDoc4 Client
     - name: Install build dependencies
       apt:
