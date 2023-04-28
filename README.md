@@ -29,7 +29,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 ### Connect the card:
 1. Plug the smart card reader with the card into your USB port
 2. Click "connect to linux" in the small pop up that appears bottom right
-3. Run the following in a terminal:
+3. Run the following in a terminal: \
   `sudo service pcscd restart`
 
 ### Use the software:
