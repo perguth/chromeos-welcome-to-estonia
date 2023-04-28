@@ -26,11 +26,13 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 
 ## Usage
 
+### Connect the card:
 1. Plug the smart card reader with the card into your USB port
 2. Click "connect to linux" in the small pop up that appears bottom right
+3. Run the following in a terminal:
+  `sudo service pcscd restart`
 
-I most reliably got it to work by shutting down Linux, plugging the smartcard reader and smardcard in, clicking "Connect to Linux" in the Chrome OS popup and then starting Linux and opening DigiDoc to see if it works. Sometimes I needed to repeat that or even restart Chrome OS. Last time when it refused to work I also tried `sudo service pcscd restart` but still have no clue how to get it to work without repeatedly trying.
-
+### Use the software:
 - You can use `DigiDoc4` to sign and encrypt/decrypt documents.
 - You can use `Firefox` to e.g. log into the estonian online portal here: \
   https://www.eesti.ee/en \
