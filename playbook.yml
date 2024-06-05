@@ -13,7 +13,12 @@
         name: firefox-esr
     - name: Install the Web eID extension [MANUAL]
       debug:
-        msg: Manual step in Firefox -> https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
+        msg:
+        - "# MANUAL STEPS REQUIRED:"
+        - ""
+        - "1. Open Firefox"
+        - "2. Install the following plugin:"
+        - "  https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension  "
 
   - block: # Install card software
     - name: De-armor GPG key
@@ -36,7 +41,7 @@
     - name: Print usage instructions
       ansible.builtin.debug:
         msg:
-        - "# USAGE INSTRUCTIONS"
+        - "# USAGE INSTRUCTIONS:"
         - ""
         - "Every time you want to connect"
         - "your card to your computer,"
