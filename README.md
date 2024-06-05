@@ -34,7 +34,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 
 ### Use the software:
 - You can use `DigiDoc4` to sign and encrypt/decrypt documents.
-- You can use `Firefox` to e.g. log into the estonian online portal here: \
-  https://www.eesti.ee/en \
-  Click the lock top right and then continue using "ID-card". \
-  There you'll find your email and state related services.
+- You can use `Firefox` to e.g. log into the State Portal:
+  1. Open https://www.eesti.ee/en in `Firefox`
+  2. Click the lock top right and then continue using "ID-card".
+  3. There you'll find your email and state related services.
