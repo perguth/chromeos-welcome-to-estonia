@@ -17,7 +17,7 @@
         - "# MANUAL STEPS REQUIRED:"
         - ""
         - "1. Open Firefox"
-        - "2. Install the following plugin:"
+        - "2. Install the following extension:"
         - "  https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension  "
 
   - block: # Install card software
