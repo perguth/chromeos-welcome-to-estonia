@@ -6,11 +6,6 @@
 
   become: true
   tasks:
-
-  - name: Create temporary build directory
-    tempfile:
-      state: directory
-    register: tmp_dir
         
   - block: # Install Firefox and plugins
     - name: Install Firefox
@@ -21,6 +16,10 @@
         msg: Manual step in Firefox -> https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
   - block: # Install open-eid
+    - name: Create temporary build directory
+      tempfile:
+        state: directory
+      register: tmp_dir
     - name: Add public key
       apt_key:
         url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
