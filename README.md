@@ -15,7 +15,7 @@ You need to install manually:
 ## Installation
 
 1. **First [enable Linux](https://support.google.com/chromebook/answer/9145439)**.
-1. **Copy** the following commands into the **[terminal](https://support.google.com/chromebook/thread/565904)**:
+1. **Copy** the following commands **into the [terminal](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/setup.sh)"
