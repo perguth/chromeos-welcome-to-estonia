@@ -11,7 +11,7 @@
     - name: Install Firefox
       apt:
         name: firefox-esr
-    - name: Install the Web eID extension [MANUAL]
+    - name: Print instructions 
       debug:
         msg:
         - "# MANUAL STEPS REQUIRED:"
@@ -38,7 +38,7 @@
         name: pcscd
         enabled: true
         state: started
-    - name: Print usage instructions
+    - name: Print instructions
       ansible.builtin.debug:
         msg:
         - "# USAGE INSTRUCTIONS:"
