@@ -21,14 +21,15 @@
         - "  https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension  "
 
   - block: # Install card software
-    - name: De-armor GPG key
-      shell: "cat RIA.key | gpg --yes --dearmor -o /usr/share/keyrings/ria-repository.gpg"
-      args:
-        creates: /usr/share/keyrings/docker-archive-keyring.gpg
+    - name: Add public key
+      apt_key:
+        url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
+        id: A754225DA61EA549
     - name: Add repository
       apt_repository:
-        filename: example-reporia-repository
-        repo: 'deb [signed-by=/usr/share/keyrings/ria-repository.gpg] https://installer.id.ee/media/ubuntu/ jammy main'
+        repo: deb https://installer.id.ee/media/ubuntu/ jammy main
+        filename: ria-repository
+        update_cache: yes
     - name: Install packages
       apt:
         name: [open-eid, opensc]

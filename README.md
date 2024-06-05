@@ -4,13 +4,13 @@
 
 It installs and configures:
 
-- **open-eid** - The system programm that connects the smart card reader. You never need to use it directly
-- [**DigiDoc4**](https://www.id.ee/en/rubriik/using-digidoc4/) - The software you can use to sign and encrypt documents
-- **Firefox** - A browser to open websites that need to access the e-Residency card
+- **open-eid** - The system programm that connects the smart card reader. You never need to use it directly.
+- [**DigiDoc4**](https://www.id.ee/en/rubriik/using-digidoc4/) - The software you can use to sign and encrypt documents.
+- **Firefox** - A browser to open websites that need to access the e-Residency card.
 
 You need to install manually:
 
-- **Firefox extension** - The required Firefox extension. You never need to use it directly
+- **Firefox extension** - To enable card access. You never need to use it directly.
 
 ## Installation
 
@@ -27,8 +27,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-welcome
 ## Usage
 
 ### Connect the card:
-1. Plug the smart card reader with the card into your USB port
-2. Click `Connect to Linux` in the small pop up that appears bottom right
+
+Repeat these steps each time the card is reconnected:
+
+1. Plug the smart card reader with the card into your USB port.
+2. Click `Connect to Linux` in the small pop up that appears at the bottom right.
 3. Run the following in a terminal: \
   `sudo service pcscd restart`
 
