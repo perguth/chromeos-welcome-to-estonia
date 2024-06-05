@@ -6,7 +6,7 @@
 
   become: true
   tasks:
-        
+
   - block: # Install Firefox and plugins
     - name: Install Firefox
       apt:
@@ -15,63 +15,34 @@
       debug:
         msg: Manual step in Firefox -> https://addons.mozilla.org/en-US/firefox/addon/web-eid-webextension
 
-  - block: # Install open-eid
-    - name: Create temporary build directory
-      tempfile:
-        state: directory
-      register: tmp_dir
-    - name: Add public key
-      apt_key:
-        url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
-        id: A754225DA61EA549
+  - block: # Install card software
+    - name: De-armor GPG key
+      shell: "cat RIA.key | gpg --yes --dearmor -o /usr/share/keyrings/ria-repository.gpg"
+      args:
+        creates: /usr/share/keyrings/docker-archive-keyring.gpg
     - name: Add repository
       apt_repository:
-        repo: deb https://installer.id.ee/media/ubuntu/ focal main
-        filename: ria-repository
+        filename: example-reporia-repository
+        repo: 'deb [signed-by=/usr/share/keyrings/ria-repository.gpg] https://installer.id.ee/media/ubuntu/ jammy main'
+    - name: Install packages
+      apt:
+        name: [open-eid, opensc]
         update_cache: yes
-    - name: Install dependency 1/2
-      apt:
-        name: libxerces-c3.2
-    - name: Get dependency 2/2
-      get_url:
-        url: http://ftp.ee.debian.org/debian/pool/main/x/xalan/libxalan-c111_1.11-9_amd64.deb
-        dest: "{{ tmp_dir.path }}/libxalan-c111_1.11-9_amd64.deb"
-        checksum: sha256:79179c073c342742304b8112d800c5ccaf55c85e8e731995b806cf2329bdf123
-    - name: Install dependency 2/2
-      apt:
-        deb: "{{ tmp_dir.path }}/libxalan-c111_1.11-9_amd64.deb"
-    - name: Install open-eid
-      apt:
-        name: open-eid
-
-  - block: # Install DigiDoc4 Client
-    - name: Install build dependencies
-      apt:
-        name:
-          - cmake
-          - qttools5-dev
-          - libqt5svg5-dev
-          - qttools5-dev-tools
-          - libpcsclite-dev
-          - libssl-dev
-          - libdigidocpp-dev
-          - libldap2-dev
-          - gettext
-          - pkg-config
-    - name: Get source code
-      git:
-        repo: https://github.com/open-eid/DigiDoc4-Client.git
-        dest: "{{ tmp_dir.path }}/DigiDoc4-Client"
-    - name: Configure
-      shell:
-        chdir: "{{ tmp_dir.path }}/DigiDoc4-Client"
-        cmd: cmake -B build -S .
-    - name: Build and install
-      shell:
-        chdir: "{{ tmp_dir.path }}/DigiDoc4-Client"
-        cmd: cmake --build build
-
-  - name: Clean up
-    file:
-      path: '{{tmp_dir}}'
-      state: absent
+    - name: Enable service
+      systemd_service:
+        name: pcscd
+        enabled: true
+        state: started
+    - name: Print usage instructions
+      ansible.builtin.debug:
+        msg:
+        - "# USAGE INSTRUCTIONS"
+        - ""
+        - "Every time you want to connect"
+        - "your card to your computer,"
+        - "do it the following way:"
+        - ""
+        - "1. Connect your reader/card to your computer"
+        - "2. Select 'Connect to Linux'"
+        - "3. Open a terminal and run the following:"
+        - "  sudo service pcscd restart  "
