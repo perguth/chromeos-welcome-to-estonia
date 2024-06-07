@@ -2,7 +2,7 @@
 
 NAME=chromeos-welcome-to-estonia
 
-# Clean up
+# Clean up later on and on abort
 trap "cd .. && rm -rf $NAME" EXIT
 
 # Install Ansible
