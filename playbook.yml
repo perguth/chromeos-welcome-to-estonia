@@ -41,6 +41,9 @@
         state: started
 
   - block: # Install system service
+    - name: Install dependency
+      apt:
+        name: inotify-tools
     - name: Create script folder
       file:
         path: /opt/chromeos-welcome-to-estonia
