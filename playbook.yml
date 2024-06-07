@@ -56,7 +56,7 @@
         dest: /etc/systemd/system/chromeos-welcome-to-estonia.service
     - name: Enable service
       systemd_service:
-        state: restarted
+        state: reloaded
         enabled: true
         daemon_reload: true
         name: chromeos-welcome-to-estonia
