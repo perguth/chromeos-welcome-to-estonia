@@ -1,6 +1,6 @@
 ---
 
-- name: This will compute a while.
+- name: "ChromeOS: Welcome to Estonia"
   hosts: localhost
   connection: local
 
@@ -11,7 +11,7 @@
     - name: Install Firefox
       apt:
         name: firefox-esr
-    - name: Print instructions 
+    - name: Print instructions
       debug:
         msg:
         - "# MANUAL STEPS REQUIRED:"
@@ -23,7 +23,7 @@
   - block: # Install card software
     - name: Add public key
       apt_key:
-        url: https://raw.githubusercontent.com/perguth/chromeos-welcome-to-estonia/main/RIA.key
+        file: RIA.key
         id: A754225DA61EA549
     - name: Add repository
       apt_repository:
@@ -39,16 +39,24 @@
         name: pcscd
         enabled: true
         state: started
-    - name: Print instructions
-      ansible.builtin.debug:
-        msg:
-        - "# USAGE INSTRUCTIONS:"
-        - ""
-        - "Every time you want to connect"
-        - "your card to your computer,"
-        - "do it the following way:"
-        - ""
-        - "1. Connect your reader/card to your computer"
-        - "2. Select 'Connect to Linux'"
-        - "3. Open a terminal and run the following:"
-        - "  sudo service pcscd restart  "
+
+  - block: # Install system service
+    - name: Create script folder
+      file:
+        path: /opt/chromeos-welcome-to-estonia
+        state: directory
+    - name: Copy script
+      copy:
+        src: monitor-usb.sh
+        dest: /opt/chromeos-welcome-to-estonia/monitor-usb.sh
+        mode: u+x
+    - name: Copy service file
+      copy:
+        src: chromeos-welcome-to-estonia.service
+        dest: /etc/systemd/system/chromeos-welcome-to-estonia.service
+    - name: Enable service
+      systemd_service:
+        state: restarted
+        enabled: true
+        daemon_reload: true
+        name: chromeos-welcome-to-estonia

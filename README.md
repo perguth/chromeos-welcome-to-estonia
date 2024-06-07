@@ -32,8 +32,6 @@ Repeat these steps each time the card is reconnected:
 
 1. Plug the smart card reader with the card into your USB port.
 2. Click `Connect to Linux` in the small pop up that appears at the bottom right.
-3. Run the following in a terminal: \
-  `sudo service pcscd restart`
 
 ### Use the software:
 - You can use `DigiDoc4` to sign and encrypt/decrypt documents.

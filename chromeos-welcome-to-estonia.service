@@ -1,0 +1,11 @@
+[Unit]
+Description=ChromeOS: Welcome to Estonia
+Documentation=https://github.com/perguth/chromeos-welcome-to-estonia
+After=network.target
+
+[Service]
+ExecStart=/bin/sh /opt/chromeos-welcome-to-estonia/monitor-usb.sh
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
