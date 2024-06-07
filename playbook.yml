@@ -34,9 +34,9 @@
       apt:
         name: [open-eid, opensc, inotify-tools]
         update_cache: yes
+    # inotify-tools is required for the system service below
 
   - block: # Install system service
-    # inotify-tools is installed in previous block
     - name: Ensure USB folder exists
       file:
         path: /dev/bus/usb/
