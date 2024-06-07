@@ -6,8 +6,8 @@ This setup installs and configures the following:
 
 - [**DigiDoc4**](https://www.id.ee/en/rubriik/using-digidoc4/): Software for signing and encrypting documents.
 - **Firefox**: Browser for accessing websites that require the e-Residency card.
-- Required system services (not used directly by users):
-  - OpenSC
+- System services (not used directly by users):
+  - OpenSC: Required for this to work.
   - Custom service for plug-and-play card functionality
 
 You need to install manually:
