@@ -44,6 +44,10 @@
     - name: Install dependency
       apt:
         name: inotify-tools
+    - name: Ensure USB folder exists
+      file:
+        path: /dev/bus/usb/
+        state: directory
     - name: Create script folder
       file:
         path: /opt/chromeos-welcome-to-estonia
