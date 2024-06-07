@@ -2,15 +2,17 @@
 
 > Sets up ChromeOS with all the tools needed for the e-Residency of Estonia.
 
-It installs and configures:
+This setup installs and configures the following:
 
-- **open-eid** - The system programm that connects the smart card reader. You never need to use it directly.
-- [**DigiDoc4**](https://www.id.ee/en/rubriik/using-digidoc4/) - The software you can use to sign and encrypt documents.
-- **Firefox** - A browser to open websites that need to access the e-Residency card.
+- [**DigiDoc4**](https://www.id.ee/en/rubriik/using-digidoc4/): Software for signing and encrypting documents.
+- **Firefox**: Browser for accessing websites that require the e-Residency card.
+- Required system services (not used directly by users):
+  - OpenSC
+  - Custom service for plug-and-play card functionality
 
 You need to install manually:
 
-- **Firefox extension** - To enable card access. You never need to use it directly.
+- **Firefox extension**: Enables card access for websites. This extension operates in the background and doesn't require direct interaction.
 
 ## Installation
 
@@ -34,8 +36,8 @@ Repeat these steps each time the card is reconnected:
 2. Click `Connect to Linux` in the small pop up that appears at the bottom right.
 
 ### Use the software:
-- You can use `DigiDoc4` to sign and encrypt/decrypt documents.
-- You can use `Firefox` to e.g. log into the State Portal:
-  1. Open https://www.eesti.ee/en in `Firefox`
-  2. Click the lock top right and then continue using "ID-card".
-  3. There you'll find your email and state related services.
+- **DigiDoc4**: Use this software to sign and encrypt/decrypt documents.
+- **Firefox**: Use this browser to, e.g., log into the State Portal:
+  1. Open https://www.eesti.ee/en in Firefox
+  2. Click the lock icon at the top right and select "ID-card" to continue.
+  3. Access your email and state-related services.
