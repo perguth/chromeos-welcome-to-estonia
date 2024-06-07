@@ -23,7 +23,7 @@
   - block: # Install card software
     - name: Add public key
       apt_key:
-        file: RIA.key
+        url: https://installer.id.ee/media/install-scripts/C6C83D68.pub
         id: A754225DA61EA549
     - name: Add repository
       apt_repository:
