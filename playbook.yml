@@ -32,18 +32,11 @@
         update_cache: yes
     - name: Install packages
       apt:
-        name: [open-eid, opensc]
+        name: [open-eid, opensc, inotify-tools]
         update_cache: yes
-    - name: Enable service
-      systemd_service:
-        name: pcscd
-        enabled: true
-        state: started
 
   - block: # Install system service
-    - name: Install dependency
-      apt:
-        name: inotify-tools
+    # inotify-tools is installed in previous block
     - name: Ensure USB folder exists
       file:
         path: /dev/bus/usb/
