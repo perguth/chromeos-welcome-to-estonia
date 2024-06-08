@@ -38,6 +38,6 @@ Repeat these steps each time the card is reconnected:
 ### Use the software:
 - **DigiDoc4**: Use this software to sign and encrypt/decrypt documents.
 - **Firefox**: Use this browser to, e.g., log into the State Portal:
-  1. Open https://www.eesti.ee/en in Firefox
+  1. Open https://www.eesti.ee/en in Firefox.
   2. Click the lock icon at the top right and select "ID-card" to continue.
   3. Access your email and state-related services.
