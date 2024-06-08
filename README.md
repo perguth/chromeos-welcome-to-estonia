@@ -8,7 +8,7 @@ This setup installs and configures the following:
 - **Firefox**: Browser for accessing websites that require the e-Residency card.
 - System services (not used directly by users):
   - OpenSC: Required for this to work.
-  - Custom service for plug-and-play card functionality
+  - Custom service for plug-and-play card functionality.
 
 You need to install manually:
 
