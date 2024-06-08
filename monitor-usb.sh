@@ -5,7 +5,7 @@
 
 USB_DIR="/dev/bus/usb"
 
-inotifywait -m -r -e create --format '%w%f' "$USB_DIR" | while read -r file; do
+inotifywait -m -r -e create --format '%w%f' "$USB_DIR" | while read -r; do
     echo "USB device connected, restarting pcscd"
     service pcscd restart
 done
