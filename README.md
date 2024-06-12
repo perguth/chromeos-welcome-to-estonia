@@ -16,6 +16,8 @@ You need to install manually:
 
 ## Installation
 
+> 💡 If you're **upgrading** from a previous installation, please follow [these steps](https://github.com/perguth/chromeos-welcome-to-estonia/releases).
+
 1. **First [enable Linux](https://support.google.com/chromebook/answer/9145439)**.
 1. **Copy** the following commands **into the [terminal](https://support.google.com/chromebook/thread/565904)**:
 
