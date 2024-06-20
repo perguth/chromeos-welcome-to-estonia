@@ -1,6 +1,6 @@
 # ChromeOS: Welcome to Estonia
 
-> Sets up ChromeOS with all the tools needed for the e-Residency of Estonia.
+> 💡 Sets up ChromeOS with all the tools needed for the e-Residency of Estonia.
 
 This setup installs and configures the following:
 
